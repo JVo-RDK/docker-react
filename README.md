@@ -1,3 +1,5 @@
+Dies ist Teil des Ergebnis der Udemy Schulung zu Docker und Kubernetes
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

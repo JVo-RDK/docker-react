@@ -1,0 +1,10 @@
+# Travis CI needs always sudo permission 
+sudo: required
+services:
+    - docker
+
+before_install:
+    - docker build -t th3v055i/docker-react -f Dockerfile.dev .
+
+script:
+    - docker run -e CI=true th3v055i/docker-react npm run test
