@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Modified by JVo for the 3rd time started with docker-compose
+          Modified by JVo: for a TestBranch in git 
         </p>
         <a
           className="App-link"
