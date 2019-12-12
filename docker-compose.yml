@@ -1,0 +1,22 @@
+# instead of: docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app
+version: '3'
+services: 
+    # hosting the development server
+    webserver: 
+        build: 
+            context: .
+            dockerfile: Dockerfile.dev
+        ports:
+            - "3000:3000"
+        volumes:
+            - /app/node_modules
+            - .:/app
+    # to run the needed tests
+    testing:
+        build:
+            context: .
+            dockerfile: Dockerfile.dev
+        volumes:
+            - /app/node_modules
+            - .:/app
+        command: ["npm", "run", "test"]                  
